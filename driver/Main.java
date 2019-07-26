@@ -5,21 +5,21 @@
  */
 package driver;
 import mobs.*;
-/**
- *
- * @author Furrytrash
- */
+
+
 public class Main {
-
-
-
+    
+    static boolean gameLoop = true;
 
     static Main m = new Main();
     static MobCard mb1 = new MobCard("Joel", 10, 5, 19, 2);
-public static void main(String[] args){
-    
-    System.out.print(mb1);
-    
+    public static void main(String[] args){
+        while(gameLoop) {
+            System.out.println("Hello World");
+            gameLoop = false;
+        }
+        
+        System.out.print(mb1);
 }
     
 }
