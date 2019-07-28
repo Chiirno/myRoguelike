@@ -8,12 +8,16 @@ package myRoguelike.driver;
 import java.awt.Canvas;
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import mobs.*;
 
 /**
  *
  * @author Chiruno
  */
 public class Window extends Canvas {
+    
     
     public Window(int width, int height, String title, Game game) { 
         JFrame frame = new JFrame(title);
