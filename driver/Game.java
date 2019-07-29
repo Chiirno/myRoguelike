@@ -38,6 +38,7 @@ public class Game extends Canvas implements Runnable {
         }
     }
     
+    @Override
     public void run() {
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
