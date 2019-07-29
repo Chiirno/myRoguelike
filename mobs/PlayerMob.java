@@ -3,12 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mobs;
+package myRoguelike.mobs;
+
+import java.awt.Graphics;
 
 /**
  *
- * @author Furrytrash
+ * @author Chiruno
  */
-public class PlayerMob {
+public class PlayerMob extends GameObject {
+
+    public PlayerMob(int x, int y, MobID id) {
+        super(x, y, id);
+    }
+
+    @Override
+    public void tick() {
+        
+    }
+
+    @Override
+    public void render(Graphics g) {
+        
+    }
     
 }

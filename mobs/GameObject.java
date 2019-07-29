@@ -5,9 +5,40 @@
  */
 package myRoguelike.mobs;
 
+import java.awt.Graphics;
 
-public class GameObject {
+
+public abstract class GameObject {
     
     protected int x, y;
+    protected MobID id;
+    
+    public GameObject(int x, int y, MobID id) {
+        this.x = x;
+        this.y = y;
+        this.id = id;
+    }
+    
+    public abstract void tick();
+    public abstract void render(Graphics g);
+    
+    public void setX(int x) {
+        this.x = x;
+    }
+    public void setY(int y) {
+        this.y = y;
+    }
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+    public void setID(MobID id) {
+        this.id = id;
+    }
+    public MobID getID() {
+        return id;
+    }
     
 }
