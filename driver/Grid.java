@@ -6,59 +6,51 @@
 package myRoguelike.driver;
 
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.*;
 
-public class Grid {
-
-
-    public Grid() {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-                    ex.printStackTrace();
-                }
-
-                JFrame frame = new JFrame("Testing");
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.add(new TestPane());
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setVisible(true);
-            }
-        });
-    }
-
-    public class TestPane extends JPanel {
-
-        public TestPane() {
+public class Grid 
+{ 
+    JFrame frame; 
+  
+    Grid() 
+    { 
+        ArrayList<JButton> tileArr = new ArrayList<JButton>();
+        
+        // creating instance of JFrame with name "first way" 
+        frame = new JFrame("first way");
+          
+        // creates instance of JButton  
+        
+        int n = 0;
+        while (n < 3) {
+            tileArr.add(new JButton("" + n));
+            tileArr.get(n).setBounds(50*n, 50*n, 50, 50);
+            frame.add(tileArr.get(n));
+            n++;
         }
+        
+        
+        System.out.println(tileArr);
+        
+//        buttonx.setBounds(100, 100, 50, 50);
+//        frame.add(buttonx);
 
-        @Override
-        public Dimension getPreferredSize() {
-            return new Dimension(200, 200);
-        }
-
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            Graphics2D g2d = (Graphics2D) g.create();
-            int size = Math.min(getWidth() - 4, getHeight() - 4) / 10;
-            int width = getWidth() - (size * 2);
-            int height = getHeight() - (size * 2);
-
-            int y = (getHeight() - (size * 10)) / 2;
-            for (int horz = 0; horz < 10; horz++) {
-                int x = (getWidth() - (size * 10)) / 2;
-                for (int vert = 0; vert < 10; vert++) {
-                    g.drawRect(x, y, size, size);
-                    x += size;
-                }
-                y += size;
-            }
-            g2d.dispose();
-        }
-
-    }
-}
+        
+          
+        // setting close operation 
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+  
+        // adds button in JFrame 
+  
+        // sets 500 width and 600 height 
+        frame.setSize(800, 800); 
+          
+        // uses no layout managers 
+        frame.setLayout(null); 
+          
+        // makes the frame visible 
+        frame.setVisible(true); 
+    } 
+      
+} 
