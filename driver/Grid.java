@@ -22,14 +22,17 @@ public class Grid
           
         // creates instance of JButton  
         
-        int n = 0;
-        while (n < 3) {
-            tileArr.add(new JButton("" + n));
-            tileArr.get(n).setBounds(50*n, 50*n, 50, 50);
-            frame.add(tileArr.get(n));
-            n++;
-        }
         
+        int n = 0;
+        for (int x = 0; x < 15; x++) {
+            for (int y = 0; y < 15; y++) {
+                tileArr.add(new JButton());
+                tileArr.get(n).setBounds(50*x+1, 50*y+1, 50, 50);
+                frame.add(tileArr.get(n));
+                n++;
+            }
+        }
+            
         
         System.out.println(tileArr);
         
@@ -44,7 +47,7 @@ public class Grid
         // adds button in JFrame 
   
         // sets 500 width and 600 height 
-        frame.setSize(800, 800); 
+        frame.setSize(769, 791); 
           
         // uses no layout managers 
         frame.setLayout(null); 
