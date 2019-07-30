@@ -13,6 +13,10 @@ public class Grid
 { 
     JFrame frame; 
   
+    static int indexGetter(int x, int y) {
+        return 15*x + y;
+    }
+    
     Grid() 
     { 
         ArrayList<JButton> tileArr = new ArrayList<JButton>();
@@ -29,12 +33,13 @@ public class Grid
                 tileArr.add(new JButton());
                 tileArr.get(n).setBounds(50*x+1, 50*y+1, 50, 50);
                 frame.add(tileArr.get(n));
+                System.out.println("(" + x + "," + y + ")");
                 n++;
             }
         }
-            
         
-        System.out.println(tileArr);
+        tileArr.get(indexGetter(0,0)).setBackground(Color.RED);
+        
         
 //        buttonx.setBounds(100, 100, 50, 50);
 //        frame.add(buttonx);
