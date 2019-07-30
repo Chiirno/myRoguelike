@@ -6,6 +6,7 @@
 package myRoguelike.driver;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.*;
 
@@ -16,6 +17,8 @@ public class Grid
     static int indexGetter(int x, int y) {
         return 15*x + y;
     }
+    
+
     
     Grid() 
     { 
@@ -28,15 +31,17 @@ public class Grid
         
         
         int n = 0;
-        for (int x = 0; x < 15; x++) {
-            for (int y = 0; y < 15; y++) {
+        for (int x = 0; x < 30; x++) {
+            for (int y = 0; y < 30; y++) {
                 tileArr.add(new JButton());
-                tileArr.get(n).setBounds(50*x+1, 50*y+1, 50, 50);
+                tileArr.get(n).setBounds(25*x+1, 25*y+1, 25, 25);
                 frame.add(tileArr.get(n));
                 System.out.println("(" + x + "," + y + ")");
                 n++;
             }
         }
+        
+        
         
         tileArr.get(indexGetter(0,0)).setBackground(Color.RED);
         
@@ -60,5 +65,7 @@ public class Grid
         // makes the frame visible 
         frame.setVisible(true); 
     } 
+    
+    
       
 } 

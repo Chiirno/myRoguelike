@@ -7,6 +7,7 @@ package myRoguelike.driver;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 import mobs.*;
 
@@ -87,8 +88,16 @@ public class Game extends Canvas implements Runnable {
         bs.show();
     }
     
+    public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+    
+        if (key == KeyEvent.VK_LEFT) {
+            System.out.println("Left!");
+        }
+    }
+    
     public static void main(String[] args){
         new Grid();
-}
+    }
     
 }
