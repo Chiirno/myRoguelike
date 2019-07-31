@@ -36,24 +36,7 @@ public class Grid
                 frame.add(newTile);
             }
         }
-        
-//        
-//        int n = 0;
-//        for (int x = 0; x < 30; x++) {
-//            for (int y = 0; y < 30; y++) {
-//                tileArr.add(new JButton());
-//                tileArr.get(n).setBounds(25*x+1, 25*y+1, 25, 25);
-//                frame.add(tileArr.get(n));
-//                //System.out.println("(" + x + "," + y + ")");
-//                n++;
-//            }
-//        }
-
-        
-        
-//        buttonx.setBounds(100, 100, 50, 50);
-//        frame.add(buttonx);
-
+     
         
           
         // setting close operation 
