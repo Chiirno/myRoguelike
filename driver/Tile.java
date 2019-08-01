@@ -10,10 +10,26 @@ import javax.swing.*;
 
 
 
-public class Tile
+public class Tile extends JPanel
 {
-    public static void CreateTile(int number) {
-        int ID = number;
+    
+    private String ID;
+    public int tileSize;
+    public int tileLocX;
+    public int tileLocY;
+    
+    public Tile(int tileSize, int tileLocX, int tileLocY) {
+        this.tileSize = tileSize;
+        this.tileLocX = tileLocX;
+        this.tileLocY = tileLocY;
+}
+    
+    JFrame tile = new JFrame(ID);
+
+    
+    public void paintTile(Graphics g) {
+        g.drawRect(tileSize, tileSize, tileLocX, tileLocY);
     }
+    
     
 } 

@@ -9,11 +9,11 @@ import javax.swing.*;
 public class Grid 
 { 
     JFrame frame;
-    
+    public static JButton[][] gridTiles;
     Grid() 
     {
         // Variable initializations //
-        int gridSize = 1;
+        int gridSize = 10;
         int tileSize = (750/gridSize);
         JButton[][] gridTiles = new JButton[gridSize][gridSize];
         
@@ -35,6 +35,8 @@ public class Grid
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Sets close op
         frame.setSize(769, 791); // Sets window size
         frame.setLayout(null); // uses no layout managers 
-        frame.setVisible(true); // makes the frame visible    
+        frame.setVisible(true); // makes the frame visible   
+        
+
     } 
 } 
