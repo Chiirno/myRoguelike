@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myRoguelike.driver;
+package myRoguelike.graphics;
 
 import java.awt.*;
 import javax.swing.*;
-
-
 
 public class Tile extends JPanel
 {

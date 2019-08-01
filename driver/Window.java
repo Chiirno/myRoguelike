@@ -16,7 +16,7 @@ import mobs.*;
  *
  * @author Chiruno
  */
-public class Window extends Canvas {
+public class Window extends JFrame {
     
     
     public Window(int width, int height, String title, Game game) { 

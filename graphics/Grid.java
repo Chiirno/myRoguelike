@@ -1,8 +1,7 @@
 
-package myRoguelike.driver;
+package myRoguelike.graphics;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import javax.swing.*;
 
@@ -10,7 +9,7 @@ public class Grid
 { 
     JFrame frame;
     public static JButton[][] gridTiles;
-    Grid() 
+    public Grid() 
     {
         // Variable initializations //
         int gridSize = 10;
@@ -30,6 +29,8 @@ public class Grid
                 frame.add(newTile);
             }
         }
+        
+        Tile newTile = new Tile(50, 50, 50);
         
         // Making the window //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Sets close op

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package myRoguelike.driver;
+import myRoguelike.graphics.Grid;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
